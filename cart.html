@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/title-Logo1.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header class="mainHeader">
+      <div class="logoDiv">
+        <img src="./assets/imgs/logo.png" alt="" class="logoImg" />
+      </div>
+      <nav class="headerNav">
+        <ul class="navMenu">
+          <li>
+            <a href="#sliderSection"><span>Home</span></a>
+          </li>
+          <li>
+            <a href="#categoriesSection"><span>Categories</span></a>
+          </li>
+          <li>
+            <a href="#ProductsSection"><span>Products</span></a>
+          </li>
+          <li>
+            <a href="#mainFooter"><span>Contact</span></a>
+          </li>
+        </ul>
+        <input type="text" id="searchInput" placeholder="Search..." />
+      </nav>
+
+      <div class="cartDiv">
+        <span id="Maincartspam" class="cartSpan">0</span>
+        <img src="./assets/imgs/cart.png" alt="" class="cartImg" />
+        <!-- <i class="fa fa-shopping-bag"></i> -->
+      </div>
+      <div class="navItem toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul class="dropdown_menu">
+        <li class="">
+          <a href=""><span>Home</span> </a>
+        </li>
+        <li class="">
+          <a href=""> <span>Categories</span> </a>
+        </li>
+        <li class="">
+          <a href=""><span>Sevices</span></a>
+        </li>
+        <li class="">
+          <a href=""><span>Contact Us</span></a>
+        </li>
+        <div>
+          <div class="dropdown_cartDiv">
+            <span id="subcartspam" class="cartSpan">0</span>
+            <img src="./assets/imgs/cart.png" alt="" class="cartImg" />
+          </div>
+        </div>
+      </ul>
+    </header>
+  </body>
+</html>
