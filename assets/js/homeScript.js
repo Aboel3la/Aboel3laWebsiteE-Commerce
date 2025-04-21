@@ -2,7 +2,6 @@
 
 let prods = "";
 let cartItems = [];
-let cartCounter = 0;
 
 document.addEventListener("DOMContentLoaded", function () {
   fetch("products.json")
@@ -12,7 +11,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
     .catch((error) => console.error("Error loading products:", error));
 
-  menuResponsive();
   setInterval(autoSlider, 5000);
 
   setTimeout(function () {
@@ -23,20 +21,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   cartCounterUpdate();
 });
-
-/**** menu Responsive ******** */
-function menuResponsive() {
-  const toggleBtn = document.querySelector(".toggle-btn");
-  const toggleBtnIcon = document.querySelector(".toggle-btn i");
-  const dropdownMenu = document.querySelector(".dropdown_menu");
-  toggleBtn.onclick = function () {
-    dropdownMenu.classList.toggle("open");
-
-    const isOpen = dropdownMenu.classList.contains("open");
-
-    toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
-  };
-}
 
 /***       Slider Image *** */
 
@@ -97,7 +81,7 @@ function loadProducts(category, id) {
           `;
 
         card.querySelector(".buy-button").addEventListener("click", () => {
-          alert(`You have bought: ${product.id} for ${product.price}`);
+          addItemToCart(product);
         });
 
         container.appendChild(card);
@@ -147,34 +131,7 @@ function loadAllProducts() {
       //   if(cartItems[i].id;
       // }
       // cartItems = localStorage.getItem("cartItems");
-      const str = localStorage.getItem("cartProducts");
-
-      cartItems = JSON.parse(str);
-      if (cartItems == null) cartItems = [];
-      if (cartItems.find((element) => element.id == product.id)) {
-        cartItems.find((element) => element.id == product.id).count++;
-      } else {
-        cartItems.push({
-          id: product.id,
-          name: product.brand + " " + product.model,
-          img: product.image,
-          count: 1,
-        });
-      }
-      cartCounter++;
-      document.getElementById("Maincartspam").innerHTML = cartCounter;
-      document.getElementById("subcartspam").innerHTML = cartCounter;
-
-      // convert array to JSON string using JSON.stringify()
-      // cartItems = [];
-      const jsonArray = JSON.stringify(cartItems);
-      const jsonCartCounter = JSON.stringify(cartCounter);
-
-      console.log(cartItems);
-
-      // save to localStorage using "array" as the key and jsonArray as the value
-      localStorage.setItem("cartProducts", jsonArray);
-      localStorage.setItem("ItemsCartCounter", jsonCartCounter);
+      addItemToCart(product);
     });
 
     container.appendChild(card);
@@ -185,14 +142,38 @@ function loadAllProducts() {
   //   return false;
 }
 
-function cartCounterUpdate() {
-  let tmpItemsCart = Number(0);
-  if (localStorage.getItem("ItemsCartCounter")) {
-    tmpItemsCart = localStorage.getItem("ItemsCartCounter");
-    cartCounter = Number(JSON.parse(tmpItemsCart));
+function addItemToCart(product) {
+  const str = localStorage.getItem("cartProducts");
+
+  cartItems = JSON.parse(str);
+  if (cartItems == null) cartItems = [];
+  if (cartItems.find((element) => element.id == product.id)) {
+    cartItems.find((element) => element.id == product.id).count++;
   } else {
-    cartCounter = 0;
+    cartItems.push({
+      id: product.id,
+      name: product.brand + " " + product.model,
+      img: product.image,
+      price: product.price,
+      count: 1,
+    });
   }
+  cartCounter++;
   document.getElementById("Maincartspam").innerHTML = cartCounter;
   document.getElementById("subcartspam").innerHTML = cartCounter;
+
+  // convert array to JSON string using JSON.stringify()
+  // cartItems = [];
+  const jsonArray = JSON.stringify(cartItems);
+  // const jsonCartCounter = JSON.stringify(cartCounter);
+
+  console.log(cartItems);
+
+  // save to localStorage using "array" as the key and jsonArray as the value
+  localStorage.setItem("cartProducts", jsonArray);
+  // localStorage.setItem("ItemsCartCounter", jsonCartCounter);
+}
+
+function go_toCart() {
+  window.location.href = "./Cart.html";
 }

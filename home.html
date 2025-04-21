@@ -20,6 +20,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/homeStyle.css" />
   </head>
   <body>
     <header class="mainHeader">
@@ -46,29 +47,39 @@
 
       <div class="cartDiv">
         <span id="Maincartspam" class="cartSpan">0</span>
-        <img src="./assets/imgs/cart.png" alt="" class="cartImg" />
+        <img
+          src="./assets/imgs/cart.png"
+          alt=""
+          class="cartImg"
+          onclick="go_toCart();"
+        />
         <!-- <i class="fa fa-shopping-bag"></i> -->
       </div>
       <div class="navItem toggle-btn">
         <i class="fa-solid fa-bars"></i>
       </div>
       <ul class="dropdown_menu">
-        <li class="">
-          <a href=""><span>Home</span> </a>
+        <li>
+          <a href="#sliderSection"><span>Home</span> </a>
         </li>
-        <li class="">
-          <a href=""> <span>Categories</span> </a>
+        <li>
+          <a href="#categoriesSection"> <span>Categories</span> </a>
         </li>
-        <li class="">
-          <a href=""><span>Sevices</span></a>
+        <li>
+          <a href="#ProductsSection"><span>Products</span></a>
         </li>
-        <li class="">
-          <a href=""><span>Contact Us</span></a>
+        <li>
+          <a href="#mainFooter"><span>Contact Us</span></a>
         </li>
         <div>
           <div class="dropdown_cartDiv">
             <span id="subcartspam" class="cartSpan">0</span>
-            <img src="./assets/imgs/cart.png" alt="" class="cartImg" />
+            <img
+              src="./assets/imgs/cart.png"
+              alt=""
+              class="cartImg"
+              onclick="go_toCart();"
+            />
           </div>
         </div>
       </ul>
@@ -148,11 +159,9 @@
         <div class="product-container" id="productContainer"></div>
       </section>
     </div>
-    <footer
-      id="mainFooter"
-      style="height: 60px; width: 100%; background: #192534"
-    ></footer>
+    <footer id="mainFooter"></footer>
 
+    <script src="./assets/js/script.js"></script>
     <script src="./assets/js/homeScript.js"></script>
   </body>
 </html>

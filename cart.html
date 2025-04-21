@@ -20,6 +20,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/cartStyle.css" />
   </head>
   <body>
     <header class="mainHeader">
@@ -29,13 +30,13 @@
       <nav class="headerNav">
         <ul class="navMenu">
           <li>
-            <a href="#sliderSection"><span>Home</span></a>
+            <a href="./home.html#sliderSection"><span>Home</span></a>
           </li>
           <li>
-            <a href="#categoriesSection"><span>Categories</span></a>
+            <a href="./home.html#categoriesSection"><span>Categories</span></a>
           </li>
           <li>
-            <a href="#ProductsSection"><span>Products</span></a>
+            <a href="./home.html#ProductsSection"><span>Products</span></a>
           </li>
           <li>
             <a href="#mainFooter"><span>Contact</span></a>
@@ -53,17 +54,17 @@
         <i class="fa-solid fa-bars"></i>
       </div>
       <ul class="dropdown_menu">
-        <li class="">
-          <a href=""><span>Home</span> </a>
+        <li>
+          <a href="./home.html#sliderSection"><span>Home</span> </a>
+        </li>
+        <li>
+          <a href="./home.html#categoriesSection"> <span>Categories</span> </a>
+        </li>
+        <li>
+          <a href="./home.html#ProductsSection"><span>Products</span></a>
         </li>
         <li class="">
-          <a href=""> <span>Categories</span> </a>
-        </li>
-        <li class="">
-          <a href=""><span>Sevices</span></a>
-        </li>
-        <li class="">
-          <a href=""><span>Contact Us</span></a>
+          <a href="#mainFooter"><span>Contact Us</span></a>
         </li>
         <div>
           <div class="dropdown_cartDiv">
@@ -73,5 +74,26 @@
         </div>
       </ul>
     </header>
+
+    <div id="mainContainer">
+      <div class="container">
+        <h1>🛍️ Product List</h1>
+        <div id="product-list"></div>
+        <button id="buy-button">Buy</button>
+      </div>
+      <div id="emptyCart">
+        <p>The Cart is Empty</p>
+        <img
+          src="./assets/imgs/cart.png"
+          alt=""
+          style="width: 50px; height: 50px"
+        />
+      </div>
+    </div>
+
+    <footer id="mainFooter"></footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/cartScript.js"></script>
   </body>
 </html>
