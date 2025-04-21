@@ -163,3 +163,7 @@ function geTotalItemsPrice(arr) {
   });
   return sum_price;
 }
+
+function go_toPayment() {
+  window.location.href = "./payment.html";
+}

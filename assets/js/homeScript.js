@@ -174,10 +174,6 @@ function addItemToCart(product) {
   // localStorage.setItem("ItemsCartCounter", jsonCartCounter);
 }
 
-function go_toCart() {
-  window.location.href = "./Cart.html";
-}
-
 function go_toTop() {
   // const element = document.querySelector(".mainHeader");
   // element.scrollIntoView({

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cart</title>
+    <title>Payment</title>
     <link rel="icon" type="image/x-icon" href="./assets/imgs/title-Logo1.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +20,7 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/cartStyle.css" />
+    <link rel="stylesheet" href="./assets/css/payment.css" />
   </head>
   <body>
     <header class="mainHeader">
@@ -47,6 +47,7 @@
 
       <div class="cartDiv">
         <span id="Maincartspam" class="cartSpan">0</span>
+
         <img
           src="./assets/imgs/cart.png"
           alt=""
@@ -84,34 +85,53 @@
         </div>
       </ul>
     </header>
-
     <div id="mainContainer">
-      <div class="ProductListContainer">
-        <h1>🛍️ Product List</h1>
-        <div id="product-list"></div>
-        <button id="buy-button" onclick="go_toPayment()">Buy</button>
-      </div>
-      <div class="cartSummary">
-        <h2 class="cart_summary_title">Cart Summary</h2>
-        <!-- <div class="cart_products_count">
-          <h3 id="count">Subtotal(1)</h3>
-          <h3 id="price_sum">$ 750</h3>
-        </div>
-        <div class="cart_products_count">
-          <h3 id="cart_ship">Shipping Fee</h3>
-          <h3 id="cart_ship_sum">Free</h3>
-        </div> -->
-      </div>
-      <div id="emptyCart">
-        <p>The Cart is Empty</p>
-        <img
-          src="./assets/imgs/cart.png"
-          alt=""
-          style="width: 50px; height: 50px"
-        />
+      <div id="paymentForm">
+        <form style="width: 100%">
+          <h2 style="text-align: center; height: 60px">Payemnt</h2>
+          <div class="input-container">
+            <i class="fa fa-user icon"></i>
+            <input
+              class="input-field"
+              type="text"
+              placeholder="Full Name"
+              name="cName"
+            />
+          </div>
+          <div class="input-container">
+            <i class="fa-solid fa-map-location-dot icon"></i>
+            <input
+              class="input-field"
+              type="text"
+              placeholder="Address"
+              name="cAddress"
+            />
+          </div>
+
+          <div class="input-container">
+            <i class="fa fa-envelope icon"></i>
+            <input
+              class="input-field"
+              type="text"
+              placeholder="Email"
+              name="email"
+            />
+          </div>
+
+          <div class="input-container">
+            <i class="fa-solid fa-phone icon"></i>
+            <input
+              class="input-field"
+              type="number"
+              placeholder="Phone"
+              name="cPhone"
+            />
+          </div>
+
+          <button type="submit" class="btn">Pay</button>
+        </form>
       </div>
     </div>
-
     <footer id="mainFooter">
       <div id="copyRight_div">
         <p style="margin-left: 25px">
@@ -132,6 +152,5 @@
     </footer>
 
     <script src="./assets/js/script.js"></script>
-    <script src="./assets/js/cartScript.js"></script>
   </body>
 </html>
