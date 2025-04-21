@@ -177,3 +177,12 @@ function addItemToCart(product) {
 function go_toCart() {
   window.location.href = "./Cart.html";
 }
+
+function go_toTop() {
+  // const element = document.querySelector(".mainHeader");
+  // element.scrollIntoView({
+  //   behavior: "smooth",
+  //   block: "start",
+  // });
+  window.location.href = "./home.html#sliderSection";
+}

@@ -76,10 +76,21 @@
     </header>
 
     <div id="mainContainer">
-      <div class="container">
+      <div class="ProductListContainer">
         <h1>🛍️ Product List</h1>
         <div id="product-list"></div>
         <button id="buy-button">Buy</button>
+      </div>
+      <div class="cartSummary">
+        <h2 class="cart_summary_title">Cart Summary</h2>
+        <!-- <div class="cart_products_count">
+          <h3 id="count">Subtotal(1)</h3>
+          <h3 id="price_sum">$ 750</h3>
+        </div>
+        <div class="cart_products_count">
+          <h3 id="cart_ship">Shipping Fee</h3>
+          <h3 id="cart_ship_sum">Free</h3>
+        </div> -->
       </div>
       <div id="emptyCart">
         <p>The Cart is Empty</p>
@@ -91,7 +102,24 @@
       </div>
     </div>
 
-    <footer id="mainFooter"></footer>
+    <footer id="mainFooter">
+      <div id="copyRight_div">
+        <p style="margin-left: 25px">
+          ©2025 <span style="color: #c55555">Abdelrahman Aboul-Ela</span> . All
+          Rights Reserved
+        </p>
+      </div>
+      <div id="contactLogo">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+      <div id="topIcon">
+        <div id="topIcondiv" onclick="topFunction();">
+          <i class="fa-solid fa-angle-up"></i>
+        </div>
+      </div>
+    </footer>
 
     <script src="./assets/js/script.js"></script>
     <script src="./assets/js/cartScript.js"></script>
