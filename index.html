@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="./assets/imgs/title-Logo1.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/homeStyle.css" />
+  </head>
+  <body>
+    <header class="mainHeader">
+      <div class="logoDiv">
+        <img src="./assets/imgs/logo.png" alt="" class="logoImg" />
+      </div>
+      <nav class="headerNav">
+        <ul class="navMenu">
+          <li>
+            <a href="#sliderSection"><span>Home</span></a>
+          </li>
+          <li>
+            <a href="#categoriesSection"><span>Categories</span></a>
+          </li>
+          <li>
+            <a href="#ProductsSection"><span>Products</span></a>
+          </li>
+          <li>
+            <a href="#mainFooter"><span>Contact</span></a>
+          </li>
+        </ul>
+        <input type="text" id="searchInput" placeholder="Search..." />
+      </nav>
+
+      <div class="cartDiv">
+        <span id="Maincartspam" class="cartSpan">0</span>
+        <img
+          src="./assets/imgs/cart.png"
+          alt=""
+          class="cartImg"
+          onclick="go_toCart();"
+        />
+        <!-- <i class="fa fa-shopping-bag"></i> -->
+      </div>
+      <div class="navItem toggle-btn">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+      <ul class="dropdown_menu">
+        <li>
+          <a href="#sliderSection"><span>Home</span> </a>
+        </li>
+        <li>
+          <a href="#categoriesSection"> <span>Categories</span> </a>
+        </li>
+        <li>
+          <a href="#ProductsSection"><span>Products</span></a>
+        </li>
+        <li>
+          <a href="#mainFooter"><span>Contact Us</span></a>
+        </li>
+        <div>
+          <div class="dropdown_cartDiv">
+            <span id="subcartspam" class="cartSpan">0</span>
+            <img
+              src="./assets/imgs/cart.png"
+              alt=""
+              class="cartImg"
+              onclick="go_toCart();"
+            />
+          </div>
+        </div>
+      </ul>
+    </header>
+    <div id="mainContainer">
+      <section id="sliderSection" class="sectionContainer">
+        <div id="slider" style="height: 100%">
+          <img
+            class="mySlides"
+            src="./assets/imgs/sliderImg/television-and-electronics-sale-discount-vector-14299367.jpg"
+          />
+          <img
+            class="mySlides"
+            src="./assets/imgs/sliderImg/iStock-Global-retail_ED.jpg"
+          />
+          <img
+            class="mySlides"
+            src="./assets/imgs/sliderImg/iFFALCON_FK_PR_1200x600.jpg"
+          />
+          <img
+            class="mySlides"
+            src="./assets/imgs/sliderImg/istockphoto-637372676-612x612.jpg"
+          />
+          <img
+            class="mySlides"
+            src="./assets/imgs/sliderImg/online-6817350_1280.jpg"
+          />
+          <button
+            class="sliderBtn sliderBlack sliderDisplayLeft"
+            onclick="plusDivs(-1)"
+          >
+            &#10094;
+          </button>
+          <button
+            class="sliderBtn sliderBlack sliderDisplayRight"
+            onclick="plusDivs(1)"
+          >
+            &#10095;
+          </button>
+        </div>
+      </section>
+      <section id="categoriesSection" class="sectionContainer">
+        <div class="categoriseContainer">
+          <!-- <h1>Categories</h1> -->
+          <div class="categoriesList">
+            <div class="singleCategory" onclick="loadProducts('All',0)">
+              <img src="./assets/imgs/categories/All.png" alt="" />
+              <div class="categoryTitle"><span>All</span></div>
+            </div>
+
+            <div class="singleCategory" onclick="loadProducts('audio',1)">
+              <img src="./assets/imgs/categories/headphone.png" alt="" />
+              <div class="categoryTitle"><span>Audio</span></div>
+            </div>
+
+            <div class="singleCategory" onclick="loadProducts('gaming',2)">
+              <img src="./assets/imgs/categories/gaming.png" alt="" />
+              <div class="categoryTitle"><span>gaming</span></div>
+            </div>
+
+            <div class="singleCategory" onclick="loadProducts('tv',3)">
+              <img src="./assets/imgs/categories/screen4.png" alt="" />
+              <div class="categoryTitle"><span>screen</span></div>
+            </div>
+            <div class="singleCategory" onclick="loadProducts('mobile',4)">
+              <img src="./assets/imgs/categories/tablet.png" alt="" />
+              <div class="categoryTitle"><span>mobile</span></div>
+            </div>
+            <!-- <div class="singleCategory full-width">
+              <img src="./assets/imgs/categories/appliances.png" alt="" />
+              <div class="categoryTitle"><span>appliances</span></div>
+            </div> -->
+          </div>
+        </div>
+      </section>
+      <section id="ProductsSection" class="sectionContainer">
+        <div class="product-container" id="productContainer"></div>
+      </section>
+    </div>
+
+    <footer id="mainFooter">
+      <div id="copyRight_div">
+        <p style="margin-left: 25px">
+          ©2025 <span style="color: #c55555">Abdelrahman Aboul-Ela</span> . All
+          Rights Reserved
+        </p>
+      </div>
+      <div id="contactLogo">
+        <i class="fa-brands fa-square-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+      <div id="topIcon">
+        <div id="topIcondiv" onclick="topFunction();">
+          <i class="fa-solid fa-angle-up"></i>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/homeScript.js"></script>
+  </body>
+</html>
