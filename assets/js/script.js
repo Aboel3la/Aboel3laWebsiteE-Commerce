@@ -56,5 +56,5 @@ function topFunction() {
 }
 
 function go_toCart() {
-  window.location.href = "./cart.html";
+  window.location.href = "cart.html";
 }
